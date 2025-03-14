@@ -2,6 +2,8 @@ import React from 'react';
 import { Download } from 'lucide-react';
 
 const About = () => {
+  const basePath = import.meta.env.DEV ? '' : '/My-Profile';
+  
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,7 +12,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative" style={{ width: '450px', height: '450px' }}>
             <img
-              src="/images/profile.jpg"
+              src={`${basePath}/images/profile.jpg`}
               alt="Profile photo in a European setting"
               className="rounded-lg shadow-xl w-full h-full object-cover"
             />
